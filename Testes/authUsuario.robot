@@ -5,14 +5,22 @@ Library    String
 
 *** Variable ***
 ${BASE_URL}         http://localhost:3333
+    
 
+*** Test Case ***
+Validar login de usuario
+    Conectar no serviço
+    Realizar Login na Aplicação
+
+Validar cadastro de usuario
+    Conectar no serviço
+    Realizar Cadastro na Aplicação
+    
 
 *** Keywords ***
 Conectar no serviço
     Create Session  bfriend     ${BASE_URL}
-    
 
-*** Test Case ***
 Realizar Login na Aplicação
     Conectar no serviço
     &{data}=    Create Dictionary    Email=GabrielRuiz@gmail.com    Senha=Gabriel123
